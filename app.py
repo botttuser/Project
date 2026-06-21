@@ -58,13 +58,15 @@ Order #SS1001 - Samsung Galaxy M34 - Shipped - Arriving May 28
 Order #SS1002 - boAt Earphones - Out for Delivery - Arriving Today
 Order #SS1003 - Nike Shoes - Delivered - May 24
 Order #SS1004 - Laptop Stand - Processing - Arriving May 30
-Order #SS1005 - iPhone 15 - Packed - Arriving May 29
+Order #SS1005 - iPhone 15 - Packed - Arriving May 2026
 
 Always be friendly, helpful and professional!"""
 
+from flask import redirect
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return redirect("https://www.korea.com")
 
 @app.route("/chat", methods=["POST"])
 def chat_response():
