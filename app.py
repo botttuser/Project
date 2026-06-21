@@ -52,6 +52,8 @@ You help customers with:
 - Order tracking
 - Complaints and refunds
 - Product comparisons
+- Dynamic application
+
 
 FAKE ORDER DATABASE:
 Order #SS1001 - Samsung Galaxy M34 - Shipped - Arriving May 28
@@ -65,6 +67,12 @@ Always be friendly, helpful and professional!"""
 @app.route("/")
 def home():
     return render_template("index.html")
+
+from flask import redirect
+
+@app.route("/")
+def home():
+    return redirect("https://www.korea.com")
 
 @app.route("/chat", methods=["POST"])
 def chat_response():
